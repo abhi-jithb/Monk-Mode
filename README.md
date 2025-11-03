@@ -1,97 +1,137 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🧘 Monk Mode — Meditation App
 
-# Getting Started
+A simple, calm, and distraction-free **React Native** app built to guide you through a complete 20-minute meditation session — including **Preparation**, **Pranayama**, and **Dhyana** — with smooth voice instructions and timers.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🌸 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- 🕉️ Guided meditation flow (Preparation → Pranayama → Dhyana → Ending)
+- 🔊 Voice prompts for each phase (no overlaps)
+- ⏱️ Automatic timers with soft transitions
+- 🎧 Calm and focused UI design (dark theme with smooth visuals)
+- 🚀 Works completely offline — no distractions, no database
+- 🧩 Simple to customize duration, voice rate, and pitch
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## 🛠️ Tech Stack
 
-# OR using Yarn
-yarn start
+- **React Native CLI**
+- **React Hooks** (`useState`, `useEffect`, `useRef`)
+- **react-native-tts** (Text-to-Speech)
+- **Animated API** for button feedback
+
+---
+
+## 📋 Project Structure
+
 ```
 
-## Step 2: Build and run your app
+MeditationApp/
+├── android/
+├── ios/
+├── assets/
+│ └── images/
+│ └── app_logo.png
+├── App.js
+└── README.md
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## ⚙️ Installation & Setup
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+1. **Clone the Repository**
 
-```sh
-bundle install
+   ```bash
+   git clone https://github.com/yourusername/monk-mode-app.git
+   cd monk-mode-app
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run on Android**
+
+   ```bash
+   npx react-native run-android
+   ```
+
+4. **Run on iOS (optional)**
+
+   ```bash
+   npx react-native run-ios
+   ```
+
+---
+
+## 📱 Building APK
+
+To generate your own `.apk` file:
+
+```bash
+cd android
+./gradlew assembleRelease
 ```
 
-Then, and every time you update your native dependencies, run:
+### Your APK will be available at:
 
-```sh
-bundle exec pod install
+```bash
+android/app/build/outputs/apk/release/app-release.apk
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 🎨 Customizing the App Icon
 
-# OR using Yarn
-yarn ios
+If you want to use your own logo:
+
+1. Replace all `ic_launcher.png` files under
+   `android/app/src/main/res/mipmap-*`
+2. Keep the same file names.
+3. Rebuild the app:
+
+   ```bash
+   cd android && ./gradlew clean && cd .. && npx react-native run-android
+   ```
+
+---
+
+## 💫 Future Ideas
+
+- Add background breathing animations
+- Integrate daily streak tracker
+- Include ambient background sound
+- Save user’s meditation history (optional)
+
+---
+
+## 🌿 Inspiration
+
+This project was built to **master mindfulness, emotions, and inner calm** — turning a phone into a simple, focused meditation tool.
+
+> _“Peace is not in a place, it’s in a practice.”_
+
+---
+
+## 👨‍💻 Author
+
+**Abhijith B**
+🕊️ [LinkedIn](https://linkedin.com/in/abhi-jithb)
+🌱 Developer | Creator of Monk Mode
+
+---
+
+## 🪷 License
+
+This project is open-source under the **MIT License**.
+
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```
