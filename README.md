@@ -46,8 +46,8 @@ MeditationApp/
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/monk-mode-app.git
-   cd monk-mode-app
+   git clone https://github.com/abhi-jithb/Monk-Mode.git
+   cd Monk-Mode
    ```
 
 2. **Install Dependencies**
